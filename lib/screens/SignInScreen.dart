@@ -1,5 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_news_app/screens/NewsScreen.dart';
 import 'package:flutter_news_app/widgets/CustomTextField.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -69,12 +70,16 @@ class _SignInScreenState extends State<SignInScreen> {
               Center(
                 child: SizedBox(
                   width: 150,
+                  height: 50,
                   child: MaterialButton(
+                      // padding: const EdgeInsets.all(15),
                       color: const Color(0xff001F3F),
                       shape: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20)),
+                          borderRadius: BorderRadius.circular(25)),
                       onPressed: () {
-                        //TODO
+                        Navigator.of(context).push(
+                            MaterialPageRoute(
+                            builder: (BuildContext context) => const NewsScreen()));
                       },
                       child: const Text(
                         "Sign In",
@@ -123,21 +128,22 @@ class _SignInScreenState extends State<SignInScreen> {
                       onPressed: () {
                         //TODO
                       },
-                      child: Row(
-                        children: [
-                          const Expanded(child: SizedBox()),
-                          IconButton(
-                              onPressed: () {},
-                              icon: const FaIcon(FontAwesomeIcons.google)),
-                          const SizedBox(
-                            width: 10,
-                          ),
-                          const Text(
-                            "Continue with Google",
-                            style: TextStyle(color: Colors.black),
-                          ),
-                          const Expanded(child: SizedBox()),
-                        ],
+                      child: const Padding(
+                        padding: EdgeInsets.all(10.0),
+                        child: Row(
+                          children: [
+                            Expanded(child: SizedBox()),
+                            FaIcon(FontAwesomeIcons.google),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Text(
+                              "Continue with Google",
+                              style: TextStyle(color: Colors.black),
+                            ),
+                            Expanded(child: SizedBox()),
+                          ],
+                        ),
                       )),
                 ),
               ),
@@ -153,23 +159,22 @@ class _SignInScreenState extends State<SignInScreen> {
                       onPressed: () {
                         //TODO
                       },
-                      child: Row(
-                        children: [
-                          const Expanded(child: SizedBox()),
-                          IconButton(
-                              onPressed: () {
-                                //TODO
-                              },
-                              icon: const FaIcon(FontAwesomeIcons.facebook)),
-                          const SizedBox(
-                            width: 10,
-                          ),
-                          const Text(
-                            "Continue with Facebook",
-                            style: TextStyle(color: Colors.black),
-                          ),
-                          const Expanded(child: SizedBox()),
-                        ],
+                      child: const Padding(
+                        padding: EdgeInsets.all(10.0),
+                        child: Row(
+                          children: [
+                            Expanded(child: SizedBox()),
+                            FaIcon(FontAwesomeIcons.facebook),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Text(
+                              "Continue with Facebook",
+                              style: TextStyle(color: Colors.black),
+                            ),
+                            Expanded(child: SizedBox()),
+                          ],
+                        ),
                       )),
                 ),
               ),
