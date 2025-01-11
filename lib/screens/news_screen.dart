@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_news_app/screens/news_details_screen.dart';
 import 'package:flutter_news_app/widgets/news_item.dart';
 
 class NewsScreen extends StatefulWidget {
@@ -216,7 +217,10 @@ class _NewsScreenState extends State<NewsScreen> {
                     publishAt: news['publishAt']!,
                     imageUrl: news['imageUrl'],
                     onTap: (id) {
-                      print("News item with id $id clicked!");
+                      Navigator.of(context).push(MaterialPageRoute(
+                        builder: (BuildContext context) =>
+                            NewsDetailsScreen(newsId: id),
+                      ));
                     },
                   ),
                 );

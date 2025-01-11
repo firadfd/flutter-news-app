@@ -1,7 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_news_app/screens/NewsScreen.dart';
-import 'package:flutter_news_app/widgets/CustomTextField.dart';
+import 'package:flutter_news_app/screens/news_screen.dart';
+import 'package:flutter_news_app/widgets/custom_text_field.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class SignInScreen extends StatefulWidget {

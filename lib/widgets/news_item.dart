@@ -21,17 +21,17 @@ class NewsItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(5.0),
-      child: InkWell(
-        onTap: onTap != null ? () => onTap!(id) : null,
-        child: Card(
-          elevation: 5,
-          child: Container(
-            padding: const EdgeInsets.all(10),
-            height: 120,
-            width: double.infinity,
-            decoration: const BoxDecoration(
-                color: Color(0xffF8F8F8),
-                borderRadius: BorderRadius.all(Radius.circular(10))),
+      child: Card(
+        elevation: 5,
+        child: Container(
+          padding: const EdgeInsets.all(10),
+          height: 120,
+          width: double.infinity,
+          decoration: const BoxDecoration(
+              color: Color(0xffF8F8F8),
+              borderRadius: BorderRadius.all(Radius.circular(10))),
+          child: InkWell(
+            onTap: onTap != null ? () => onTap!(id) : null,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               crossAxisAlignment: CrossAxisAlignment.center,
