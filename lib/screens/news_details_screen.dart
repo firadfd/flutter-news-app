@@ -26,7 +26,7 @@ class _NewsDetailsScreenState extends State<NewsDetailsScreen> {
             ClipRRect(
               borderRadius: BorderRadius.circular(10),
               child: Image.network(
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmCy16nhIbV3pI1qLYHMJKwbH2458oiC9EmA&s",
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-C_UAhXq9GfuGO452EEzfbKnh1viQB9EDBQ&s",
                 height: 300,
                 width: double.infinity,
                 fit: BoxFit.cover,

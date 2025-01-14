@@ -10,7 +10,7 @@ class NewsScreen extends StatefulWidget {
 }
 
 class _NewsScreenState extends State<NewsScreen> {
-  int _currentIndex = 0; // Tracks the selected tab
+  int _currentIndex = 0;
 
   List<Map<String, String?>> newsItems = [
     {
@@ -127,15 +127,13 @@ class _NewsScreenState extends State<NewsScreen> {
                 color: Colors.transparent,
               ),
               labelColor: Colors.black,
-              // Selected tab text color
               unselectedLabelColor: Colors.grey,
-              // Unselected tab text color
               labelStyle: TextStyle(
-                fontWeight: FontWeight.bold, // Bold text for selected tab
+                fontWeight: FontWeight.bold,
               ),
               unselectedLabelStyle: TextStyle(
                 fontWeight:
-                    FontWeight.normal, // Normal text for unselected tabs
+                    FontWeight.normal,
               ),
               tabs: [
                 Tab(text: "All"),
