@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class NewsDetailsScreen extends StatefulWidget {
-  final String newsId;
+  final String newsUrl;
 
-  const NewsDetailsScreen({super.key, required this.newsId});
+  const NewsDetailsScreen({super.key, required this.newsUrl});
 
   @override
   State<NewsDetailsScreen> createState() => _NewsDetailsScreenState();

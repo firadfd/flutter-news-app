@@ -5,7 +5,7 @@ class NewsItem extends StatelessWidget {
   final String? imageUrl;
   final String publisher;
   final String publishAt;
-  final String id;
+  final String url;
   final Function(String id)? onTap;
 
   const NewsItem(
@@ -14,7 +14,7 @@ class NewsItem extends StatelessWidget {
       required this.publisher,
       required this.publishAt,
       this.imageUrl,
-      required this.id,
+      required this.url,
       this.onTap});
 
   @override
@@ -31,7 +31,7 @@ class NewsItem extends StatelessWidget {
               color: Color(0xffF8F8F8),
               borderRadius: BorderRadius.all(Radius.circular(10))),
           child: InkWell(
-            onTap: onTap != null ? () => onTap!(id) : null,
+            onTap: onTap != null ? () => onTap!(url) : null,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -55,22 +55,29 @@ class NewsItem extends StatelessWidget {
                       ),
                       Row(
                         children: [
-                          Text(
-                            publisher,
-                            maxLines: 1,
-                            softWrap: true,
-                            textAlign: TextAlign.start,
-                            style: TextStyle(color: Colors.grey, fontSize: 12),
+                          Flexible(
+                            child: Text(
+                              publisher,
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis, // Adds ellipsis (...) for long text
+                              softWrap: false, // Ensures no wrapping
+                              textAlign: TextAlign.start,
+                              style: const TextStyle(color: Colors.grey, fontSize: 12),
+                            ),
                           ),
                           const SizedBox(
                             width: 10,
                           ),
-                          Text(publishAt,
+                          Flexible(
+                            child: Text(
+                              publishAt,
                               maxLines: 1,
-                              softWrap: true,
+                              overflow: TextOverflow.ellipsis, // Adds ellipsis (...) for long text
+                              softWrap: false, // Ensures no wrapping
                               textAlign: TextAlign.start,
-                              style:
-                                  TextStyle(color: Colors.grey, fontSize: 12))
+                              style: const TextStyle(color: Colors.grey, fontSize: 12),
+                            ),
+                          ),
                         ],
                       )
                     ],
