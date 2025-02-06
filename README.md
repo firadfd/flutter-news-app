@@ -1,16 +1,21 @@
-# flutter_news_app
 
-A new Flutter project.
+# News App
 
-## Getting Started
+Built a news application to fetch and display news articles from various sources.
+Utilized Dio for network requests and Hive for local data caching.
+Followed MVVM architecture for clean code separation.
+Designed an intuitive UI with smooth navigation.
 
-This project is a starting point for a Flutter application.
+## Features
 
-A few resources to get you started if this is your first Flutter project:
+- Splash Screen 
+- Sign In , Sign Up
+- Realtime news
+- Category News
+- Cross platform
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Screenshots
+
+![App Screenshot](https://firebasestorage.googleapis.com/v0/b/app-screenshot-352c0.appspot.com/o/flutter%2Fnote.png?alt=media&token=bbd24775-06af-4d2b-b1e1-b7c2af780526)
+
